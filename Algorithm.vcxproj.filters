@@ -5,6 +5,7 @@
     <ClInclude Include="Algorithm\00_Algorithm.h" />
     <ClInclude Include="Algorithm\01_Big_0_Notation.h" />
     <ClInclude Include="Stack\00_Stack.h" />
+    <ClInclude Include="Stack\01_Array_Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
