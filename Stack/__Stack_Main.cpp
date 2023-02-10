@@ -69,6 +69,7 @@ int main()
 		Stack_Calculator::MakePostfix(&post[0], mid);
 
 		cout << post << endl;
+		cout << Stack_Calculator::CalcPostfix(post) << endl << endl;
 	}
 
 	//1 10 +2 *5 +
@@ -79,6 +80,7 @@ int main()
 		Stack_Calculator::MakePostfix(&post[0], mid);
 
 		cout << post << endl;
+		cout << Stack_Calculator::CalcPostfix(post) << endl << endl;
 	}
 
 	// 1.5 1 +
@@ -89,6 +91,7 @@ int main()
 		Stack_Calculator::MakePostfix(&post[0], mid);
 
 		cout << post << endl;
+		cout << Stack_Calculator::CalcPostfix(post) << endl << endl;
 	}
 	return 0;
 }
