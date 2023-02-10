@@ -7,6 +7,7 @@
       ㄴ 가장 윗 데이터의 인덱스를 top이라는 변수를 두어 관리한다.
       ㄴ 처음 top의 위치는 아무 데이터도 없으니 -1에서 시작한다.
 */
+
 #include<iostream>
 #include<assert.h>
 
@@ -27,30 +28,28 @@ public:
 
     bool Push(T data)
     {
-        if (top + 1 == size)
-            std::cout << "Is Full" << endl;
-        else
+        if (top < size - 1)
+        {
             datas[++top] = data;
+            return true;
+        }
+        else
+            return false;
     }
 
     T& Top()
     {
-        return T[top];
+        assert(top != -1);
+        return datas[top];
     }
 
     void Pop()
     {
-        if (top == -1)
-            std::cout << "Is Empty" << std::endl;
-        else
-            datas[top--];
+        assert(top != -1);
+        --top;
     }
 
-    bool IsEmpty()
-    {
-        if (top == -1)  return true;
-        else return false;
-    }
+	bool IsEmpty() { return top == -1; }
 
 private:
     T* datas = nullptr;   // 데이터

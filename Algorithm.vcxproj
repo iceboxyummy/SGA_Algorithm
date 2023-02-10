@@ -141,6 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Stack\03_Stack_Calculator.h" />
     <ClInclude Include="Algorithm\00_Algorithm.h" />
     <ClInclude Include="Algorithm\01_Big_0_Notation.h" />
     <ClInclude Include="Stack\00_Stack.h" />

@@ -6,6 +6,7 @@
     <ClInclude Include="Algorithm\01_Big_0_Notation.h" />
     <ClInclude Include="Stack\00_Stack.h" />
     <ClInclude Include="Stack\01_Array_Stack.h" />
+    <ClInclude Include="Stack\03_Stack_Calculator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
