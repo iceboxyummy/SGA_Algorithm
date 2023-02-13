@@ -7,9 +7,13 @@
     <ClInclude Include="Stack\00_Stack.h" />
     <ClInclude Include="Stack\01_Array_Stack.h" />
     <ClInclude Include="Stack\03_Stack_Calculator.h" />
+    <ClInclude Include="Queue\00_Queue.h" />
+    <ClInclude Include="Queue\01_Linear_Queue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Stack\__Stack_Main.cpp" />
+    <ClCompile Include="Stack\_Stack_Solution.cpp" />
+    <ClCompile Include="Queue\__Queue_Main.cpp" />
   </ItemGroup>
 </Project>

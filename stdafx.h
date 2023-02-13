@@ -4,4 +4,9 @@
 // [ Macro ]
 //==================
 
-#define STACK_MAIN
+// [STACK]
+//#define STACK_MAIN
+//#define STACK_SOLUTION
+
+// [QUEUE]
+#define QUEUE_MAIN
