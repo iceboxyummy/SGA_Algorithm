@@ -6,7 +6,8 @@
 
 #ifdef QUEUE_MAIN
 
-#define QURUR_STL
+//#define QUEUE_STL
+#define MY_QUEUE_STL
 
 #endif 
 
@@ -44,6 +45,40 @@ int main()
         q.pop();
     }
     cout << endl;
+
+    return 0;
+}
+#endif
+
+//===============
+// [ MY QUEUE_STL ]
+//===============
+
+#ifdef MY_QUEUE_STL
+
+#include<iostream>
+#include"01_Linear_Queue.h"
+
+using namespace std;
+
+int main()
+{
+    cout << "LinearQueue" << endl;
+    LinearQueue lq(5);
+
+    lq.Enqueue(10);
+    lq.Enqueue(20);
+    lq.Enqueue(30);
+    lq.Enqueue(40);
+    lq.Enqueue(50);
+    lq.Enqueue(60); // °¡µæÂü!!!
+
+    while (lq.IsEmpty() == false)
+    {
+        cout << lq.Front() << endl;
+        cout << lq.Back() << endl << endl;
+        lq.Dequeue();
+    }
 
     return 0;
 }

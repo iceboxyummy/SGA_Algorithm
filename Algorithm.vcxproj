@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="Queue\00_Queue.h" />
     <ClInclude Include="Queue\01_Linear_Queue.h" />
+    <ClInclude Include="Queue\02_Circular_Queue.h" />
     <ClInclude Include="Stack\03_Stack_Calculator.h" />
     <ClInclude Include="Algorithm\00_Algorithm.h" />
     <ClInclude Include="Algorithm\01_Big_0_Notation.h" />
@@ -151,6 +152,7 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Queue\_Queue_Solution.cpp" />
     <ClCompile Include="Queue\__Queue_Main.cpp" />
     <ClCompile Include="Stack\_Stack_Solution.cpp" />
     <ClCompile Include="Stack\__Stack_Main.cpp" />
