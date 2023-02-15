@@ -141,6 +141,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Linked_list\00_Linked_List.h" />
+    <ClInclude Include="Linked_list\02_Double_Linked_List.h" />
     <ClInclude Include="Queue\00_Queue.h" />
     <ClInclude Include="Queue\01_Linear_Queue.h" />
     <ClInclude Include="Queue\02_Circular_Queue.h" />
@@ -152,6 +154,7 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Linked_list\__Linked_List_Main.cpp" />
     <ClCompile Include="Queue\_Queue_Solution.cpp" />
     <ClCompile Include="Queue\__Queue_Main.cpp" />
     <ClCompile Include="Stack\_Stack_Solution.cpp" />

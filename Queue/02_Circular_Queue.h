@@ -33,23 +33,27 @@ public:
     bool IsFull() { return (rear + 1) % size == front; }
     bool Empty() { return rear == front; }
 
-    void Enqueue(T data) 
-    {
-        if (IsFull == false)
-            datas[++rear] = data;
-        else 
-            cout << "Is Full" << endl;
-    }
+	void Enqueue(T data)
+	{
+		if (IsFull == false)
+		{
+            // 환형 상태로 다루기 위해 %size하여 인덱스 값이 순환하도록 한다.
+			rear = (rear + 1) % size;
+			datas[rear] = data;
+		}
+		else
+			cout << "Is Full" << endl;
+	}
 
     void Dequeue() 
     {
         if (Empty == false)
-            front++;
+            front = (front + 1) % size;
         else
             cout << "Is Empty" << endl; 
     }
 
-    T& Front() { return datas[front + 1]; }
+    T& Front() { return datas[(front + 1) % size]; }
 
     void ViewIndex()
     {
