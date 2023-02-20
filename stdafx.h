@@ -13,5 +13,9 @@
 //#define QUEUE_SOLUTION
 
 // [ LINKED_LIST ]
-#define LINKED_LIST_MAIN
-//#define LINKED_SOLUTION
+//#define LINKED_LIST_MAIN
+//#define LINKED_LIST_SOLUTION
+
+// [ Tree ]
+#define TREE_MAIN
+//#define TREE_SOLUTION

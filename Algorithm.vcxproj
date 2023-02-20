@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="Linked_list\00_Linked_List.h" />
     <ClInclude Include="Linked_list\02_Double_Linked_List.h" />
+    <ClInclude Include="Linked_list\03_Ranking_List.h" />
     <ClInclude Include="Queue\00_Queue.h" />
     <ClInclude Include="Queue\01_Linear_Queue.h" />
     <ClInclude Include="Queue\02_Circular_Queue.h" />
@@ -152,6 +153,10 @@
     <ClInclude Include="Stack\00_Stack.h" />
     <ClInclude Include="Stack\01_Array_Stack.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Tree\00_Tree.h" />
+    <ClInclude Include="Tree\01_LCRS_Tree.h" />
+    <ClInclude Include="Tree\02_Binary_Tree.h" />
+    <ClInclude Include="Tree\04_Heap_Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Linked_list\__Linked_List_Main.cpp" />
@@ -162,6 +167,7 @@
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Tree\__Tree_Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
