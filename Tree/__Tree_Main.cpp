@@ -10,7 +10,8 @@
 
 //#define LSRC_TREE
 //#define BINARY_TREE
-#define HEAP_TREE
+#define BINARY_SEARCH_TREE
+//#define HEAP_TREE
 
 #endif 
 
@@ -99,6 +100,50 @@ int main()
     cout << "PostOrder : ";
     BinaryTree::PostOrder(root);
     cout << endl;
+
+    return 0;
+}
+#endif
+
+//==================
+// [ BINARY TREE ]
+//==================
+
+#ifdef BINARY_SEARCH_TREE
+
+#include<iostream>
+#include"03_Binary_Search_Tree.h"
+
+using namespace std;
+
+int main()
+{
+    BST Tree;
+    BST::Node* Root = BST::Create(100);
+
+    Tree.InsertNode(&Root, 50);
+    Tree.InsertNode(&Root, 75);
+    Tree.InsertNode(&Root, 30);
+    Tree.InsertNode(&Root, 150);
+    Tree.InsertNode(&Root, 175);
+    Tree.InsertNode(&Root, 125);
+    Tree.InsertNode(&Root, 110);
+    Tree.InsertNode(&Root, 100);
+
+    cout << Tree.SearchIteration(Root, 125)->key << endl;
+    cout << Tree.SearchRecurrsive(Root, 125)->key << endl;
+
+    // 이진 탐색 트리에서 중위 순회를 할 경우 오름차순으로 값이 출력된다.
+    cout << endl;
+    Tree.InOrder(Root, 0);
+
+    Tree.DeleteNode(&Root, 125);
+
+    cout << endl;
+    Tree.InOrder(Root, 0);
+
+    cout << "Height : " << Tree.GetHeight(Root) << endl;
+    cout << "Node Count : " << Tree.GetNodeCount(Root) << endl;
 
     return 0;
 }

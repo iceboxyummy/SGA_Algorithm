@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -156,7 +156,9 @@
     <ClInclude Include="Tree\00_Tree.h" />
     <ClInclude Include="Tree\01_LCRS_Tree.h" />
     <ClInclude Include="Tree\02_Binary_Tree.h" />
+    <ClInclude Include="Tree\03_Binary_Search_Tree.h" />
     <ClInclude Include="Tree\04_Heap_Tree.h" />
+    <ClInclude Include="Tree\05_AVL_Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Linked_list\__Linked_List_Main.cpp" />

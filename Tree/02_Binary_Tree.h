@@ -36,18 +36,58 @@ public:
 
 public:
     // 해당 key값을 가지는 노드 생성후 트리에 추가하기
-    static void InsertNode(Node** root, int key) {}
+    static void InsertNode(Node** root, int key) 
+	{
+		Node* parent = nullptr;
+		Node* current = nullptr;
+		Node* new_node = CreateNode(key);
+
+		current = *root;
+
+		while (current != nullptr)
+		{
+			parent = current;
+			if (key < parent->data)
+				current = parent->left;
+			else
+				current = parent->right;
+		}
+
+        if (parent != nullptr)
+        {
+            if (key < parent->data)
+                parent->left = new_node;
+            else
+                parent->right = new_node;
+        }
+        else
+            *root = new_node;
+	}
 
     static void PreOrder(Node* node) 
     {
-        if (node == nullptr)
-            return;
+        if (node == nullptr) return;
 
-        else
-
+        cout << " " << node->data;
+        PreOrder(node->left);
+        PreOrder(node->right);
     }
 
-    static void InOrder(Node* node) {}
+    static void InOrder(Node* node) 
+    {
+        if (node == nullptr) return;
 
-    static void PostOrder(Node* node) {}
+        InOrder(node->left);
+        cout << " " << node->data;
+        InOrder(node->right);
+    }
+
+    static void PostOrder(Node* node) 
+    {
+        if (node == nullptr) return;
+
+        PostOrder(node->left);
+        PostOrder(node->right);
+        cout << " " << node->data;
+    }
 };

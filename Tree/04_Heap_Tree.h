@@ -60,9 +60,50 @@ public:
         ZeroMemory(values, sizeof(int) * MAX_ARRAY_SIZE);
     }
 
-    void Push(int data) {}
+    void Push(int data) 
+    {
+        values[++heap_count] = data;
 
-    int Pop() {}
+        int current = heap_count;
+        int parent = current / 2;
+
+        while (current > 1 && values[current] > values[parent])
+        {
+            Swap(&values[parent], &values[current]);
+
+            current = parent;
+            parent = current / 2;
+        }
+    }
+
+    int Pop() 
+    {
+        int result = values[1];
+
+        Swap(&values[1], &values[heap_count--]);
+        
+        int current = 1;
+        int child = current * 2;
+
+        if (child + 1 <= heap_count)
+        {
+            child = values[child] > values[child + 1] ? child : child + 1;
+        }
+
+        while (child <= heap_count && values[current] < values[child])
+        {
+            Swap(&values[current], &values[child]);
+
+            current = child;
+            child = current * 2;
+
+            if (child + 1 <= heap_count)
+            {
+                child = values[child] > values[child + 1] ? child : child + 1;
+            }
+        }
+        return result;
+    }
 
 private:
     int values[MAX_ARRAY_SIZE];
@@ -78,9 +119,7 @@ public:
     }
 
     void Push(int data)
-    {
-
-    }
+    {}
 
     int Pop()
     {}
