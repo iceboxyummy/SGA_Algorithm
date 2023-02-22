@@ -10,8 +10,9 @@
 
 //#define LSRC_TREE
 //#define BINARY_TREE
-#define BINARY_SEARCH_TREE
+//#define BINARY_SEARCH_TREE
 //#define HEAP_TREE
+#define AVL_TREE
 
 #endif 
 
@@ -171,4 +172,38 @@ int main()
 
     return 0;
 }
+#endif 
+
+//==================
+// [ AVL TREE ]
+//==================
+
+#ifdef AVL_TREE
+
+#include "05_AVL_Tree.h"
+#include<iomanip>
+
+int main()
+{
+   AVL avl;
+   AVL::Node* root = nullptr;
+   root = avl.Insert(root, 5);
+   root = avl.Insert(root, 15);
+   root = avl.Insert(root, 25);
+   root = avl.Insert(root, 18);
+   root = avl.Insert(root, 37);
+   root = avl.Insert(root, 1);
+   root = avl.Insert(root, 3);
+   root = avl.Insert(root, 9);
+   root = avl.Insert(root, 12);
+   root = avl.Insert(root, 14);
+   root = avl.Insert(root, 20);
+   root = avl.Insert(root, 80);
+   root = avl.Insert(root, 7);
+
+   //avl.Display(root);
+
+   return 0;
+}
+
 #endif 
