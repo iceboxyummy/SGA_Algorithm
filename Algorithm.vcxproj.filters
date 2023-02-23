@@ -17,6 +17,9 @@
     <ClInclude Include="Tree\02_Binary_Tree.h" />
     <ClInclude Include="Tree\04_Heap_Tree.h" />
     <ClInclude Include="Linked_list\03_Ranking_List.h" />
+    <ClInclude Include="Tree\03_Binary_Search_Tree.h" />
+    <ClInclude Include="Tree\05_AVL_Tree.h" />
+    <ClInclude Include="Graph\00_Graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -26,5 +29,6 @@
     <ClCompile Include="Queue\_Queue_Solution.cpp" />
     <ClCompile Include="Linked_list\__Linked_List_Main.cpp" />
     <ClCompile Include="Tree\__Tree_Main.cpp" />
+    <ClCompile Include="Graph\__Graph_Main.cpp" />
   </ItemGroup>
 </Project>

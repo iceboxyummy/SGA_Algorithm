@@ -17,5 +17,9 @@
 //#define LINKED_LIST_SOLUTION
 
 // [ Tree ]
-#define TREE_MAIN
+//#define TREE_MAIN
 //#define TREE_SOLUTION
+
+// [ Graph ]
+#define GRAPH_MAIN
+//#define GRAPH_SOLUTION
