@@ -142,6 +142,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Graph\00_Graph.h" />
+    <ClInclude Include="Graph\01_BFS_Graph.h" />
+    <ClInclude Include="Graph\02_DFS_Graph.h" />
     <ClInclude Include="Linked_list\00_Linked_List.h" />
     <ClInclude Include="Linked_list\02_Double_Linked_List.h" />
     <ClInclude Include="Linked_list\03_Ranking_List.h" />

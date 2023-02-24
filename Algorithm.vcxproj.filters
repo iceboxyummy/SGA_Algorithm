@@ -20,6 +20,8 @@
     <ClInclude Include="Tree\03_Binary_Search_Tree.h" />
     <ClInclude Include="Tree\05_AVL_Tree.h" />
     <ClInclude Include="Graph\00_Graph.h" />
+    <ClInclude Include="Graph\01_BFS_Graph.h" />
+    <ClInclude Include="Graph\02_DFS_Graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
