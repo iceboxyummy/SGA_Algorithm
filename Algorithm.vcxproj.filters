@@ -22,6 +22,8 @@
     <ClInclude Include="Graph\00_Graph.h" />
     <ClInclude Include="Graph\01_BFS_Graph.h" />
     <ClInclude Include="Graph\02_DFS_Graph.h" />
+    <ClInclude Include="Algorithm\Disjoint_Set.h" />
+    <ClInclude Include="Algorithm\Kruskal.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -33,5 +35,6 @@
     <ClCompile Include="Tree\__Tree_Main.cpp" />
     <ClCompile Include="Graph\__Graph_Main.cpp" />
     <ClCompile Include="Graph\_Graph_Solution.cpp" />
+    <ClCompile Include="Algorithm\_Main.cpp" />
   </ItemGroup>
 </Project>
