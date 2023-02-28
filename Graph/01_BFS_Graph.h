@@ -73,27 +73,38 @@ public:
     }
 
     void Display()
-    {}
-
-    void BFS(int start)
     {
-        q.push(start);
-
-        while (q.empty() != true)
+        for (int i = 0; i < nodeCount; i++)
         {
-            int temp = q.front();
-            visit[temp] = 1;
-            q.pop();
+            for (int j = 0; j < nodeCount; j++)
+                cout << graph[i][j] << "\t";
 
-            for (int i = 0; i < nodeCount; i++)
-            {
-                if (graph[temp][i] == 1 && visit[i] == 0)
-                {
-                    q.push(i);
-                }
-            }
+            cout << endl;
         }
     }
+
+	void BFS(int start)
+	{
+		cout << start << " ";
+		visit[start] = 1;
+		q.push(start);
+
+		while (q.empty() != true)
+		{
+			int node = q.front();
+			q.pop();
+
+			for (int i = 0; i < nodeCount; i++)
+			{
+				if (graph[node][i] == 1 && visit[i] == 0)
+				{
+					visit[i] = 1;
+					cout << i << " ";
+					q.push(i);
+				}
+			}
+		}
+	}
 
 private:
     // 노드의 개수가 5개라면 

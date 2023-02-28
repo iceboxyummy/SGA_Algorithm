@@ -32,5 +32,6 @@
     <ClCompile Include="Linked_list\__Linked_List_Main.cpp" />
     <ClCompile Include="Tree\__Tree_Main.cpp" />
     <ClCompile Include="Graph\__Graph_Main.cpp" />
+    <ClCompile Include="Graph\_Graph_Solution.cpp" />
   </ItemGroup>
 </Project>

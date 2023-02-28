@@ -21,5 +21,5 @@
 //#define TREE_SOLUTION
 
 // [ Graph ]
-#define GRAPH_MAIN
-//#define GRAPH_SOLUTION
+//#define GRAPH_MAIN
+#define GRAPH_SOLUTION
