@@ -19,7 +19,6 @@
       4. 2번 3번을 모든 노드가 T에 포함 될 때 까지 반복한다.
 */
 
-
 #include<vector>
 #include<queue>
 
