@@ -22,4 +22,8 @@
 
 // [ Graph ]
 //#define GRAPH_MAIN
-#define GRAPH_SOLUTION
+//#define GRAPH_SOLUTION
+
+// [ Algorithm ]
+#define ALGORITHM_MAIN
+//#define ALGORITHM_SOLUTION

@@ -118,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="Algorithm\Disjoint_Set.h" />
     <ClInclude Include="Algorithm\Kruskal.h" />
+    <ClInclude Include="Algorithm\Prim.h" />
     <ClInclude Include="Graph\00_Graph.h" />
     <ClInclude Include="Graph\01_BFS_Graph.h" />
     <ClInclude Include="Graph\02_DFS_Graph.h" />
@@ -166,7 +168,7 @@
     <ClInclude Include="Tree\05_AVL_Tree.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Algorithm\_Main.cpp" />
+    <ClCompile Include="Algorithm\__Algorithm_Main.cpp" />
     <ClCompile Include="Graph\_Graph_Solution.cpp" />
     <ClCompile Include="Graph\__Graph_Main.cpp" />
     <ClCompile Include="Linked_list\__Linked_List_Main.cpp" />
@@ -176,6 +178,7 @@
     <ClCompile Include="Stack\__Stack_Main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Tree\__Tree_Main.cpp" />
   </ItemGroup>

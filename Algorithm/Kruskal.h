@@ -1,5 +1,3 @@
-#pragma once
-
 // Kruskal.h
 #pragma once
 
@@ -33,69 +31,48 @@ using namespace std;
 class DisjointSetTree
 {
 public:
-    DisjointSetTree(int node_count)
+    void Init(int node_count)
     {
+        parent.clear();
+        height.clear();
+
+        parent.shrink_to_fit();
+        height.shrink_to_fit();
+
         for (int i = 0; i < node_count; i++)
         {
             parent.push_back(i);
             height.push_back(1);
-            group_size.push_back(1);
         }
     }
 
     int Find(int v)
     {
-        // 경로 압축(Path Compression)
-        // -> 탐색할 때 자식의 부모를 모두 루트로 바꿔주어 탐색시간을 줄인다.
         if (parent[v] == v) return v;
         return parent[v] = Find(parent[v]);
     }
 
-    // 랭크 압축 (rank Compression)
-    // -> 작은 집합을 큰 집합에 합쳐준다.
-    void Union1(int v1, int v2) // Union by Rank
+    void Union(int v1, int v2)
     {
         v1 = Find(v1);
         v2 = Find(v2);
 
         if (v1 == v2) return;
 
-        // 높이(깊이)가 큰 집합이 v1로 오게한다.
         if (height[v1] < height[v2])
             swap(v1, v2);
 
-        // v2의 집합을 v1로 바꾸어 준다.
-        // -> v2 대표 원소(루트)를 v1의 집합(루트)의 자식으로 만든다.
         parent[v2] = v1;
 
-        // 트리의 높이가 같을 경우 높이가 증가하게 된다.
         if (height[v1] == height[v2])
             height[v1]++;
     }
 
-    void Union2(int v1, int v2) // Union by Size
-    {
-        v1 = Find(v1);
-        v2 = Find(v2);
-
-        if (v1 == v2) return;
-
-        // 크기가 큰 집합이 v1로 오게한다.
-        if (group_size[v1] < group_size[v2])
-            swap(v1, v2);
-
-        // v2의 집합을 v1로 바꾸어 준다.
-        // -> v2 대표 원소(루트)를 v1의 집합(루트)의 자식으로 만든다.
-        parent[v2] = v1;
-
-        // 집합 크기를 더해준다.
-        group_size[v1] += group_size[v2];
-    }
+    bool IsSameSet(int v1, int v2) { return Find(v1) == Find(v2); }
 
 private:
-    vector<int> parent;   // 각 원소가 가리키는 부모 
-    vector<int> height;   // 각 집합의 높이
-    vector<int> group_size;   // 각 집합의 크기
+    vector<int> parent;
+    vector<int> height;
 };
 
 class Kruskal
@@ -115,10 +92,6 @@ public:
         }
     };
 
-    Kruskal(int nodeCount)
-        :uf(nodeCount)
-    {}
-
 public:
     void AddEdge(Edge edge)
     {
@@ -127,17 +100,21 @@ public:
 
     int MakeMST(int node_count)
     {
+        uf.Init(node_count);
+
         sort(edges.begin(), edges.end());
         
-        int sum = 0;
+        int result = 0;
 
-        for (int i = 0; i < edges.size(); i++)
+        for (const Edge& e : edges)
         {
-            if ()
+            if (uf.IsSameSet(e.v1, e.v2) == false)
             {
-                sum += edges[i].cost;
+                uf.Union(e.v1, e.v2);
+                result += e.cost;
             }
         }
+        return result;
     }
 
 private:
